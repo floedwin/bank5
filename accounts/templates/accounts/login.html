@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block body%} Login{% endblock %}
+    </title>
+<body >
+<div class="cointainer">
+
+        <h1> Welcome</h1>
+<p> You can login here please!</p>
+     <h2> Login</h2>
+<form method="post">
+    {% csrf_token%}
+    {{form.as_p}}
+    <button type="submit" > Login</button>
+
+                </form>
+
+    </div>
+
+
+</body>
+
+{% endblock %}

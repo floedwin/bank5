@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content%}
+
+<title> CustomerBankAccount</title>
+
+
+<body style="background-color:#A52A2A">
+<h1> Customer Bank Account Information</h1>
+<div class="col-sm-30">
+ <p align="right">
+     {% for account in accounts %}
+    <h1>{{account.account}}</h1>
+    <p> Full name : {{account.full_name}}</p>
+    <p> Email:{{account.email}}</p>
+    <p> Contact:{{account.contact}}</p>
+    <p> residence:{{account.residence}}</p>
+    <p> Work history :{{account.work_history}}</p>
+    <p> Next_of_kin:{{account.next_of_kin}}</p>
+    <p> Relationship:{{account.relationship}}</p>
+     <p>Account number : {{account.account_number}}</p>
+    {% endfor%}
+
+
+
+
+</div>
+</div>
+
+</body>
+
+{% endblock%}

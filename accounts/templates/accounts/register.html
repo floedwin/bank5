@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block title %} Register{% endblock %}
+    </title>
+
+
+<body style="background-color=#008B8B">
+
+        <div class="container">
+          <h1> Register</h1>
+            <form method="post">
+                 {%csrf_token%}
+                  {{form.as_p}}
+    <div class="sumbit-row">
+
+     <button type="submit" > Register</button><br/>
+                </div>
+                </form>
+
+    </div>
+
+</body>
+
+{% endblock %}

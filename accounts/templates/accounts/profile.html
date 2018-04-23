@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block title %}Profile{% endblock %}
+    </title>
+<body style= "background-color:#DB7093">
+
+<div class="cointainer">
+    <h1> Profile </h1>
+    <p>Username:{{user}}</p>
+    <p> First name:{{user.first_name}}</p>
+    <p> Last name:{{user.last_name}}</p>
+    <p> Email:{{user.email}}</p>
+
+
+
+
+    </div>
+</body>
+{%endblock%}
+
+

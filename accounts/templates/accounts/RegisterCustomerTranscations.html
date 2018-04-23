@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content%}
+
+<title> RegisterCustomer </title>
+<body>
+
+<body style="background-color:#A52A2A">
+<h1> Customer Account Trascations </h1>
+<div class="col-sm-30">
+ <p align="right">
+  
+    {% for transaction in transactions %}
+    <h1>{{transaction.transaction}}</h1>
+
+
+    <p> Full name:{{ transaction.Full_name}}</p>
+    <p> Email:{{transaction.Email}}</p>
+    <p> Contact:{{transaction.Contact}}</p>
+    <p> Account number:{{transaction.Account_number}}</p>
+    <p> Transaction type:{{transaction.Transcation_type}}</p>
+    <p> Amount:{{transaction.Amount}}</p>
+     <p>Transcation date:{{transaction.Transcation_date}}</p>
+    {% endfor %}
+
+
+
+</div>
+</div>
+
+</body>
+    {% endblock%}

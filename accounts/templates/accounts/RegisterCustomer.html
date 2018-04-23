@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content%}
+
+<title> RegisterCustomer </title>
+<body>
+
+<body style="background-color:#A52A2A">
+
+<div class="cointainer">
+
+   <h1> Register Customer </h1>
+    {% for customer in customers %}
+    <h1>{{customer.customer}}</h1>
+    <p> First name : {{customer.first_name}}</p>
+    <p>Last name:{{customer.last_name}}</p>
+    <p> Email:{{customer.email}}</p>
+    <p> Contact:{{customer.contact}}</p>
+    <p> residence:{{customer.residence}}</p>
+    <p> Occupation :{{customer.occupation}}</p>
+    <p> next_of_kin:{{customer.next_of_kin}}</p>
+    <p> Relationship:{{customer.relationship}}</p>
+
+
+    {% endfor %}
+
+</div>
+
+</body>
+    {% endblock%}
+
+
